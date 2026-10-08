@@ -705,3 +705,39 @@ canvas {
   }
 
 }
+
+
+
+/* =========================================================
+   MOBILE NAV — SEARCH / WISHLIST / BAG
+========================================================= */
+
+@media (max-width: 600px) {
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 14px !important;
+    margin-left: auto !important;
+  }
+
+  .nav-action {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    padding: 0 !important;
+  }
+
+  .nav-action svg {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  .mobile-menu-button {
+    display: none !important;
+  }
+}
