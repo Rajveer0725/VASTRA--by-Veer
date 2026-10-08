@@ -1,0 +1,491 @@
+/* =========================================================
+   VASTRA — RESPONSIVE + HORIZONTAL OVERFLOW FIXES
+   This file only adds responsive overrides.
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+.site {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   LAPTOP — 901px to 1280px
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1280px) {
+  .navbar {
+    padding: 0 3.5vw;
+  }
+
+  .desktop-nav {
+    gap: 24px !important;
+  }
+
+  .nav-actions {
+    gap: 14px !important;
+  }
+
+  .hero-content {
+    width: min(88vw, 1100px);
+    max-width: 1100px;
+  }
+
+  .hero-title {
+    font-size: clamp(64px, 8vw, 112px) !important;
+  }
+
+  .intro-section {
+    padding-left: 7vw !important;
+    padding-right: 7vw !important;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* =========================================================
+   TABLET — 601px to 900px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .navbar {
+    height: 76px;
+    padding: 0 28px;
+  }
+
+  .desktop-nav,
+  .navbar .desktop-nav {
+    display: none !important;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand {
+    font-size: 25px;
+    letter-spacing: 0.26em;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 7vw;
+  }
+
+  .hero-title {
+    font-size: clamp(58px, 10vw, 92px) !important;
+    line-height: 0.92;
+  }
+
+  .hero-description {
+    max-width: 560px;
+  }
+
+  .intro-section {
+    padding-left: 7vw !important;
+    padding-right: 7vw !important;
+  }
+
+  .vastra-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .collection-navigation {
+    gap: 18px !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  .collection-hero-content {
+    padding-left: 7vw !important;
+    padding-right: 7vw !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE — 600px and below
+========================================================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 68px;
+    padding: 0 20px;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .brand {
+    font-size: 21px;
+    letter-spacing: 0.22em;
+  }
+
+  .nav-actions {
+    gap: 10px !important;
+  }
+
+  .nav-action {
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 100svh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 22px;
+  }
+
+  .hero-title {
+    font-size: clamp(46px, 15vw, 76px) !important;
+    line-height: 0.9;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-title-line {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 330px;
+    font-size: 11px !important;
+    line-height: 1.6;
+  }
+
+  .hero-button {
+    max-width: 100%;
+  }
+
+  .intro-section {
+    width: 100%;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .intro-heading {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .vastra-category-grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .vastra-category-card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .collection-page,
+  .collection-hero,
+  .products-section,
+  .collection-end {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .collection-navigation {
+    width: 100%;
+    max-width: 100%;
+    gap: 12px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .collection-navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .collection-hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .products-header {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .products-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .product-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .product-image,
+  .product-image img {
+    max-width: 100%;
+  }
+
+  .footer-columns {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px 18px !important;
+  }
+
+  .footer-column {
+    min-width: 0;
+  }
+
+  .footer-column button,
+  .footer-column a {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE — 400px and below
+========================================================= */
+
+@media (max-width: 400px) {
+  .navbar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .nav-actions {
+    gap: 6px !important;
+  }
+
+  .hero-content,
+  .intro-section,
+  .collection-hero-content,
+  .products-header,
+  .products-grid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .vastra-category-grid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .footer {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE MODAL / DRAWER SAFETY
+   Keeps overlays usable on short and narrow screens.
+========================================================= */
+
+@media (max-width: 600px) {
+  .product-quick-view-modal {
+    width: calc(100vw - 20px) !important;
+    height: min(94svh, 760px) !important;
+    max-height: 94svh !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: minmax(240px, 43svh) minmax(0, 1fr) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .product-quick-view-modal > div:first-child {
+    height: 43svh !important;
+    min-height: 240px !important;
+  }
+
+  .product-quick-view-modal > div:first-child img {
+    min-height: 0 !important;
+  }
+
+  .product-quick-view-modal > div:nth-child(2) {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 22px 18px 28px !important;
+  }
+
+  .product-quick-view-modal h2 {
+    font-size: clamp(25px, 8vw, 36px) !important;
+    line-height: 1 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .wishlist-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .wishlist-drawer > div:first-child {
+    padding: 18px !important;
+  }
+
+  .wishlist-drawer > div:nth-child(2) {
+    padding: 18px !important;
+  }
+
+  .about-modal,
+  .philosophy-modal,
+  .private-client-modal {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    max-height: calc(100svh - 24px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 34px 22px !important;
+  }
+
+  .about-modal > div,
+  .philosophy-modal > div,
+  .private-client-modal > div {
+    max-width: 100% !important;
+  }
+
+  .philosophy-modal-title {
+    font-size: clamp(30px, 8vw, 42px) !important;
+    line-height: 0.98 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    margin-bottom: 36px !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  .philosophy-modal {
+    padding-top: 40px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .philosophy-modal > div:last-child {
+    gap: 22px !important;
+  }
+
+  .philosophy-modal > div:last-child p:last-child {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+
+  .about-modal > div:nth-of-type(2),
+  .private-client-modal > div:nth-of-type(2) {
+    font-size: clamp(26px, 7vw, 36px) !important;
+    line-height: 1.05 !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand {
+    font-size: 17px !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .nav-actions {
+    gap: 3px !important;
+  }
+
+  .nav-action {
+    min-width: 29px !important;
+    min-height: 29px !important;
+  }
+
+  .mobile-menu-button {
+    min-width: 29px !important;
+    min-height: 29px !important;
+  }
+
+  .philosophy-modal-title {
+    font-size: 29px !important;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 700px) {
+  .product-quick-view-modal {
+    grid-template-rows: minmax(190px, 36svh) minmax(0, 1fr) !important;
+  }
+
+  .product-quick-view-modal > div:first-child {
+    height: 36svh !important;
+    min-height: 190px !important;
+  }
+}

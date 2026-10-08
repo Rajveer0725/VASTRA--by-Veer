@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  background: #070707;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background: #070707;
+
+  color: #f0ece4;
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+button {
+  border: none;
+
+  background: none;
+
+  color: inherit;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  padding:
+    28px 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  z-index: 100;
+
+  mix-blend-mode: normal;
+}
+
+
+.logo {
+
+  font-size: 17px;
+
+  letter-spacing:
+    0.42em;
+
+  font-weight: 500;
+
+  color: #f5f1e9;
+}
+
+
+.nav-links {
+
+  display: flex;
+
+  gap: 45px;
+
+  font-size: 10px;
+
+  letter-spacing:
+    0.22em;
+
+  color: #c3beb6;
+}
+
+
+.nav-links a {
+
+  position: relative;
+
+  transition:
+    color 0.35s ease;
+}
+
+
+.nav-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -7px;
+
+  width: 0;
+
+  height: 1px;
+
+  background: #b49a6c;
+
+  transition:
+    width 0.35s ease;
+}
+
+
+.nav-links a:hover {
+
+  color: #ffffff;
+}
+
+
+.nav-links a:hover::after {
+
+  width: 100%;
+}
+
+
+.nav-actions {
+
+  display: flex;
+
+  gap: 25px;
+
+  font-size: 10px;
+
+  letter-spacing:
+    0.17em;
+
+  color: #aaa59d;
+}
+
+
+.nav-actions button {
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.nav-actions button:hover {
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 68% 48%,
+      #24221d 0%,
+      #0c0c0b 27%,
+      #070707 65%
+    );
+}
+
+
+/* subtle fashion studio spotlight */
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 800px;
+
+  height: 800px;
+
+  right: 2%;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(196, 174, 130, 0.08),
+      transparent 65%
+    );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   3D SCENE
+========================================================= */
+
+.hero-scene {
+
+  position: absolute;
+
+  inset: -3% -2% -3% 20%;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-copy {
+
+  position: relative;
+
+  z-index: 10;
+
+  width: 520px;
+
+  margin-left: 8vw;
+
+  padding-top: 6vh;
+}
+
+
+.eyebrow {
+
+  margin-bottom: 30px;
+
+  color: #9b968e;
+
+  font-size: 10px;
+
+  letter-spacing:
+    0.32em;
+
+  font-weight: 400;
+}
+
+
+.hero h1 {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+
+  overflow: hidden;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(
+      72px,
+      8vw,
+      132px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing:
+    -0.055em;
+
+  color: #f2eee7;
+}
+
+
+.hero-title-line {
+
+  display: block;
+
+  will-change:
+    transform;
+}
+
+
+.hero-description {
+
+  max-width: 310px;
+
+  margin-top: 38px;
+
+  color: #8d8982;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  font-weight: 300;
+}
+
+
+.explore {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 38px;
+
+  padding-bottom: 11px;
+
+  border-bottom:
+    1px solid #a68a55;
+
+  color: #e7e1d7;
+
+  font-size: 10px;
+
+  letter-spacing:
+    0.22em;
+
+  transition:
+    gap 0.4s ease,
+    color 0.3s ease;
+}
+
+
+.explore span {
+
+  color: #b49a6c;
+
+  font-size: 15px;
+}
+
+
+.explore:hover {
+
+  gap: 28px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO INDEX
+========================================================= */
+
+.hero-index {
+
+  position: absolute;
+
+  right: 42px;
+
+  bottom: 38px;
+
+  z-index: 10;
+
+  color: #69655f;
+
+  font-size: 9px;
+
+  letter-spacing:
+    0.25em;
+}
+
+
+/* =========================================================
+   COLLECTION SECTIONS
+========================================================= */
+
+.collection {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  padding:
+    150px 8vw;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-top:
+    1px solid #1a1a18;
+}
+
+
+.collection::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  border-radius: 50%;
+
+  right: -250px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  pointer-events: none;
+
+  opacity: 0.5;
+}
+
+
+.collection span {
+
+  position: relative;
+
+  z-index: 2;
+
+  color: #a68a55;
+
+  font-size: 10px;
+
+  letter-spacing:
+    0.3em;
+}
+
+
+.collection h2 {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 34px;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      9vw,
+      150px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing:
+    -0.055em;
+}
+
+
+.collection button {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: fit-content;
+
+  margin-top: 48px;
+
+  padding-bottom: 11px;
+
+  border-bottom:
+    1px solid #55504a;
+
+  font-size: 10px;
+
+  letter-spacing:
+    0.2em;
+
+  transition:
+    border-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+
+.collection button:hover {
+
+  border-color: #a68a55;
+
+  padding-left: 8px;
+}
+
+
+/* MEN */
+
+.men-section {
+
+  background:
+    linear-gradient(
+      115deg,
+      #080808 0%,
+      #11100e 60%,
+      #16130f 100%
+    );
+}
+
+
+/* WOMEN */
+
+.women-section {
+
+  background:
+    linear-gradient(
+      115deg,
+      #0b0b0a 0%,
+      #151412 55%,
+      #1b1916 100%
+    );
+}
+
+
+/* PERFUME */
+
+.perfume-section {
+
+  background:
+    linear-gradient(
+      115deg,
+      #070707 0%,
+      #100e0b 60%,
+      #17120b 100%
+    );
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  padding:
+    85px 42px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top:
+    1px solid #1a1a18;
+
+  color: #66635e;
+
+  font-size: 9px;
+
+  letter-spacing:
+    0.22em;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+
+    padding:
+      22px 20px;
+  }
+
+
+  .nav-links {
+
+    display: none;
+  }
+
+
+  .nav-actions {
+
+    gap: 14px;
+
+    font-size: 8px;
+  }
+
+
+  .hero {
+
+    min-height: 100svh;
+
+    height: 100svh;
+  }
+
+
+  .hero-scene {
+
+    inset:
+      0 -25% 15% 10%;
+
+    opacity: 0.82;
+  }
+
+
+  .hero-copy {
+
+    width: auto;
+
+    margin:
+      0 25px;
+
+    padding-top: 48vh;
+
+    align-self: flex-end;
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      clamp(
+        58px,
+        16vw,
+        78px
+      );
+  }
+
+
+  .hero-description {
+
+    max-width: 270px;
+
+    margin-top: 25px;
+
+    font-size: 11px;
+  }
+
+
+  .explore {
+
+    margin-top: 25px;
+  }
+
+
+  .hero-index {
+
+    right: 22px;
+
+    bottom: 25px;
+  }
+
+
+  .collection {
+
+    min-height: 90vh;
+
+    padding:
+      100px 25px;
+  }
+
+
+  .collection h2 {
+
+    font-size:
+      clamp(
+        58px,
+        16vw,
+        82px
+      );
+  }
+
+
+  footer {
+
+    padding:
+      50px 22px;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+}

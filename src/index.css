@@ -1,0 +1,5172 @@
+@import url("https ://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+
+
+
+:root {
+
+  font-family: "DM Sans", sans-serif;
+
+  color: #f1eee8;
+
+  background: #100e0c;
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+}
+
+
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+html {
+
+  scroll-behavior: smooth;
+
+  background: #100e0c;
+
+}
+
+
+
+body {
+
+  min-width: 320px;
+
+  background: #100e0c;
+
+  color: #f1eee8;
+
+}
+
+
+
+button {
+
+  font: inherit;
+
+  color: inherit;
+
+  border: 0;
+
+  background: none;
+
+  cursor: pointer;
+
+  outline: none;
+
+}
+
+
+
+button:focus,
+
+button:focus-visible {
+
+  outline: none;
+
+  box-shadow: none;
+
+}
+
+
+
+.site {
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+
+
+/* =========================================================
+
+   NAVBAR
+
+========================================================= */
+
+
+
+.navbar {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+
+
+  z-index: 50;
+
+
+
+  width: 100%;
+
+  height: 90px;
+
+
+
+  padding: 0 4.5vw;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+
+/* =========================================================
+
+   VASTRA LOGO
+
+========================================================= */
+
+
+
+.brand {
+
+  font-family: "DM Sans", sans-serif;
+
+
+
+  font-size: 30px;
+
+  font-weight: 400;
+
+
+
+  letter-spacing: 0.34em;
+
+
+
+  color: #ffffff;
+
+
+
+  transition:
+
+    opacity 0.3s ease,
+
+    transform 0.3s ease;
+
+}
+
+
+
+.brand:hover {
+
+  opacity: 0.75;
+
+  transform: translateY(-1px);
+
+}
+
+
+
+/* =========================================================
+
+   DESKTOP NAVIGATION
+
+========================================================= */
+
+
+
+.desktop-nav {
+
+  position: absolute;
+
+
+
+  left: 50%;
+
+  top: 50%;
+
+
+
+  transform: translate(-50%, -50%);
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  gap: 52px;
+
+
+
+  margin: 0;
+
+}
+
+
+
+/* =========================================================
+
+   MEN / WOMEN / PERFUMES
+
+========================================================= */
+
+
+
+.nav-link {
+
+  position: relative;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  height: 30px;
+
+
+
+  color: #f5f2eb;
+
+  opacity: 1 !important;
+
+
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.20em;
+
+
+
+  white-space: nowrap;
+
+
+
+  transform: translateY(0) scale(1);
+
+
+
+  transition:
+
+    color 0.3s ease,
+
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+
+    letter-spacing 0.35s ease;
+
+}
+
+
+
+/* Underline */
+
+
+
+.nav-link::after {
+
+  content: "";
+
+
+
+  position: absolute;
+
+
+
+  left: 50%;
+
+  bottom: -9px;
+
+
+
+  width: 0;
+
+  height: 1px;
+
+
+
+  background: #ffffff;
+
+
+
+  transform: translateX(-50%);
+
+
+
+  transition:
+
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+
+
+/* Hover */
+
+
+
+.nav-link:hover {
+
+  color: #ffffff;
+
+
+
+  opacity: 1;
+
+
+
+  transform: translateY(-4px) scale(1.08);
+
+
+
+  letter-spacing: 0.24em;
+
+}
+
+
+
+/* Underline appears */
+
+
+
+.nav-link:hover::after {
+
+  width: 100%;
+
+}
+
+
+
+/* Keyboard focus */
+
+
+
+.nav-link:focus,
+
+.nav-link:focus-visible {
+
+  outline: none;
+
+  box-shadow: none;
+
+}
+
+
+
+/* =========================================================
+
+   SEARCH / ACCOUNT / BAG
+
+========================================================= */
+
+
+
+.nav-action {
+
+  display: flex;
+
+  align-items: center;
+
+
+
+  gap: 8px;
+
+
+
+  color: #f5f2eb;
+
+
+
+  opacity: 0.9;
+
+
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+
+
+  letter-spacing: 0.18em;
+
+
+
+  transition:
+
+    opacity 0.3s ease,
+
+    transform 0.3s ease;
+
+}
+
+
+
+.nav-action:hover {
+
+  opacity: 1;
+
+
+
+  transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+
+   NAV ACTIONS
+
+========================================================= */
+
+
+
+.nav-actions {
+
+  display: flex;
+
+  align-items: center;
+
+
+
+  gap: 30px;
+
+}
+
+
+
+/* =========================================================
+
+   MOBILE MENU BUTTON
+
+========================================================= */
+
+
+
+.mobile-menu-button {
+
+  display: none;
+
+
+
+  color: #ffffff;
+
+}
+
+
+
+/* =========================================================
+
+   HERO
+
+========================================================= */
+
+
+
+.hero {
+
+  position: relative;
+
+
+
+  min-height: 100svh;
+
+
+
+  height: 900px;
+
+
+
+  overflow: hidden;
+
+
+
+  background: #161310;
+
+}
+
+
+
+/* =========================================================
+
+   HERO BACKGROUND
+
+========================================================= */
+
+
+
+.hero-background {
+
+  position: absolute;
+
+
+
+  inset: 0;
+
+
+
+  overflow: hidden;
+
+}
+
+
+
+/* Model image */
+
+
+
+.hero-model {
+
+  position: absolute;
+
+
+
+  inset: -2%;
+
+
+
+  background-position: center;
+
+
+
+  background-size: cover;
+
+
+
+  background-repeat: no-repeat;
+
+
+
+  will-change: transform;
+
+}
+
+
+
+/* =========================================================
+
+   HERO DARK OVERLAY
+
+========================================================= */
+
+
+
+.hero-overlay {
+
+  position: absolute;
+
+
+
+  inset: 0;
+
+
+
+  background:
+
+    linear-gradient(
+
+      90deg,
+
+      rgba(10, 8, 7, 0.88) 0%,
+
+      rgba(10, 8, 7, 0.60) 28%,
+
+      rgba(10, 8, 7, 0.08) 65%,
+
+      rgba(10, 8, 7, 0.20) 100%
+
+    );
+
+}
+
+
+
+/* =========================================================
+
+   HERO VIGNETTE
+
+========================================================= */
+
+
+
+.hero-vignette {
+
+  position: absolute;
+
+
+
+  inset: 0;
+
+
+
+  background:
+
+    radial-gradient(
+
+      circle at 58% 45%,
+
+      transparent 30%,
+
+      rgba(0, 0, 0, 0.35) 100%
+
+    );
+
+}
+
+
+
+/* =========================================================
+
+   HERO CONTENT
+
+========================================================= */
+
+
+
+.hero-content {
+
+  position: absolute;
+
+
+
+  z-index: 5;
+
+
+
+  left: 8vw;
+
+
+
+  top: 50%;
+
+
+
+  transform: translateY(-40%);
+
+
+
+  max-width: 600px;
+
+}
+
+
+
+/* =========================================================
+
+   HERO KICKER
+
+========================================================= */
+
+
+
+.hero-kicker,
+
+.section-kicker {
+
+  font-size: 10px;
+
+
+
+  letter-spacing: 0.35em;
+
+
+
+  font-weight: 400;
+
+
+
+  color: rgba(241, 238, 232, 0.75);
+
+
+
+  margin-bottom: 28px;
+
+}
+
+
+
+/* =========================================================
+
+   HERO TITLE
+
+========================================================= */
+
+
+
+.hero-title {
+
+  font-family: "Playfair Display", serif;
+
+
+
+  font-size: clamp(60px, 7.5vw, 120px);
+
+
+
+  line-height: 0.88;
+
+
+
+  font-weight: 400;
+
+
+
+  letter-spacing: -0.045em;
+
+
+
+  color: #f5f2eb;
+
+}
+
+
+
+.hero-title-mask {
+
+  display: block;
+
+
+
+  overflow: hidden;
+
+}
+
+
+
+.hero-title-line {
+
+  display: block;
+
+}
+
+
+
+/* =========================================================
+
+   HERO DESCRIPTION
+
+========================================================= */
+
+
+
+.hero-description {
+
+  margin-top: 34px;
+
+
+
+  font-size: 10px;
+
+
+
+  line-height: 1.8;
+
+
+
+  letter-spacing: 0.22em;
+
+
+
+  color: rgba(241, 238, 232, 0.78);
+
+}
+
+
+
+/* =========================================================
+
+   HERO BUTTON
+
+========================================================= */
+
+
+
+.hero-button {
+
+  margin-top: 40px;
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 18px;
+
+
+
+  padding-bottom: 11px;
+
+
+
+  border-bottom: 1px solid rgba(241, 238, 232, 0.65);
+
+
+
+  font-size: 10px;
+
+
+
+  letter-spacing: 0.22em;
+
+
+
+  color: #f5f2eb;
+
+
+
+  transition:
+
+    gap 0.4s ease,
+
+    opacity 0.3s ease;
+
+}
+
+
+
+.hero-button:hover {
+
+  gap: 27px;
+
+
+
+  opacity: 0.7;
+
+}
+
+
+
+/* =========================================================
+
+   SIDE INDEX
+
+========================================================= */
+
+
+
+.side-index {
+
+  position: absolute;
+
+
+
+  z-index: 10;
+
+
+
+  right: 4.5vw;
+
+
+
+  top: 50%;
+
+
+
+  transform: translateY(-50%);
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  gap: 28px;
+
+
+
+  font-size: 10px;
+
+
+
+  letter-spacing: 0.15em;
+
+}
+
+
+
+.side-index span {
+
+  opacity: 0.35;
+
+}
+
+
+
+.side-index .active {
+
+  opacity: 1;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 15px;
+
+}
+
+
+
+.side-index .active::after {
+
+  content: "";
+
+
+
+  width: 34px;
+
+
+
+  height: 1px;
+
+
+
+  background: rgba(226, 220, 210, 0.8);
+
+}
+
+
+
+/* =========================================================
+
+   SCROLL INDICATOR
+
+========================================================= */
+
+
+
+.scroll-indicator {
+
+  position: absolute;
+
+
+
+  z-index: 10;
+
+
+
+  bottom: 34px;
+
+
+
+  left: 8vw;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 15px;
+
+
+
+  font-size: 8px;
+
+
+
+  letter-spacing: 0.25em;
+
+
+
+  opacity: 0.55;
+
+}
+
+
+
+.scroll-indicator div {
+
+  width: 45px;
+
+
+
+  height: 1px;
+
+
+
+  background: rgba(241, 238, 232, 0.55);
+
+}
+
+
+
+/* =========================================================
+
+   INTRO SECTION
+
+========================================================= */
+
+
+
+.intro-section {
+
+  min-height: 70vh;
+
+
+
+  padding: 150px 8vw;
+
+
+
+ background: #b9a3a3;
+
+
+
+  color: #000000;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  justify-content: center;
+
+}
+
+
+
+.intro-section .section-kicker {
+
+  color: rgba(25, 22, 19, 0.5);
+
+}
+
+
+
+.intro-section h2 {
+
+  max-width: 900px;
+
+
+
+  font-family: "Playfair Display", serif;
+
+
+
+  font-size: clamp(55px, 8vw, 120px);
+
+
+
+  line-height: 0.95;
+
+
+
+  font-weight: 400;
+
+
+
+  letter-spacing: -0.05em;
+
+}
+
+
+
+.intro-section h2 em {
+
+  font-weight: 400;
+
+}
+
+
+
+.intro-copy {
+
+  max-width: 450px;
+
+
+
+  margin-top: 45px;
+
+
+
+  font-size: 13px;
+
+
+
+  line-height: 1.8;
+
+
+
+  color: rgba(25, 22, 19, 0.65);
+
+}
+
+
+
+/* =========================================================
+
+   CATEGORY GRID
+
+========================================================= */
+
+
+
+.category-grid {
+
+  display: grid;
+
+
+
+  grid-template-columns: repeat(3, 1fr);
+
+
+
+  background: #100e0c;
+
+}
+
+
+
+/* =========================================================
+
+   CATEGORY CARD
+
+========================================================= */
+
+
+
+.category-card {
+
+  position: relative;
+
+
+
+  height: 700px;
+
+
+
+  overflow: hidden;
+
+
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+
+
+.category-card:last-child {
+
+  border-right: 0;
+
+}
+
+
+
+/* =========================================================
+
+   CATEGORY IMAGE
+
+========================================================= */
+
+
+
+.category-image {
+
+  position: absolute;
+
+
+
+  inset: -3%;
+
+
+
+  background-size: cover;
+
+
+
+  background-position: center;
+
+
+
+  filter: saturate(0.72);
+
+
+
+  will-change: transform;
+
+}
+
+
+
+/* =========================================================
+
+   CATEGORY OVERLAY
+
+========================================================= */
+
+
+
+.category-overlay {
+
+  position: absolute;
+
+
+
+  inset: 0;
+
+
+
+  background:
+
+    linear-gradient(
+
+      180deg,
+
+      rgba(0, 0, 0, 0.2) 0%,
+
+      rgba(0, 0, 0, 0.15) 40%,
+
+      rgba(0, 0, 0, 0.82) 100%
+
+    );
+
+}
+
+
+
+/* =========================================================
+
+   CATEGORY CONTENT
+
+========================================================= */
+
+
+
+.category-content {
+
+  position: absolute;
+
+
+
+  z-index: 5;
+
+
+
+  left: 38px;
+
+
+
+  right: 38px;
+
+
+
+  bottom: 40px;
+
+}
+
+
+
+.category-content > span {
+
+  font-size: 9px;
+
+
+
+  letter-spacing: 0.2em;
+
+
+
+  opacity: 0.6;
+
+}
+
+
+
+.category-content h3 {
+
+  margin-top: 20px;
+
+
+
+  font-family: "Playfair Display", serif;
+
+
+
+  font-size: 48px;
+
+
+
+  font-weight: 400;
+
+
+
+  letter-spacing: -0.03em;
+
+}
+
+
+
+.category-content p {
+
+  margin-top: 8px;
+
+
+
+  font-size: 9px;
+
+
+
+  letter-spacing: 0.25em;
+
+
+
+  opacity: 0.65;
+
+}
+
+
+
+.category-content button {
+
+  margin-top: 28px;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 12px;
+
+
+
+  font-size: 9px;
+
+
+
+  letter-spacing: 0.2em;
+
+
+
+  opacity: 0.8;
+
+
+
+  transition:
+
+    gap 0.3s ease,
+
+    opacity 0.3s ease;
+
+}
+
+
+
+.category-content button:hover {
+
+  gap: 20px;
+
+
+
+  opacity: 1;
+
+}
+
+
+
+/* =========================================================
+
+   STATEMENT
+
+========================================================= */
+
+
+
+.statement {
+
+  min-height: 100vh;
+
+
+
+  padding: 140px 8vw;
+
+
+
+  background: #161310;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  justify-content: center;
+
+}
+
+
+
+.statement-number {
+
+  font-size: 10px;
+
+
+
+  letter-spacing: 0.25em;
+
+
+
+  opacity: 0.45;
+
+
+
+  margin-bottom: 80px;
+
+}
+
+
+
+.statement h2 {
+
+  font-family: "Playfair Display", serif;
+
+
+
+  font-size: clamp(55px, 8.5vw, 135px);
+
+
+
+  line-height: 0.9;
+
+
+
+  font-weight: 400;
+
+
+
+  letter-spacing: -0.055em;
+
+}
+
+
+
+.statement h2 em {
+
+  font-weight: 400;
+
+}
+
+
+
+.statement h2 strong {
+
+  font-weight: 400;
+
+}
+
+
+
+/* =========================================================
+
+   FOOTER
+
+========================================================= */
+.footer {
+  padding: 100px 5vw 35px;
+  background: #0d0c0b !important;
+  color: #ffffff !important;
+}
+.footer-brand {
+  font-family: "Playfair Display", serif;
+ font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.75;
+  letter-spacing: -0.07em;
+}
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 100px;
+  border-top: 1px solid rgba(23, 20, 17, 0.2);
+  padding-top: 30px;
+}
+.footer-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-columns p {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+.footer-columns button {
+  width: fit-content;
+  font-size: 11px;
+  opacity: 0.7;
+  transition: opacity 0.25s ease;
+}
+.footer-columns button:hover {
+
+  opacity: 1;
+
+}
+
+
+
+.footer-bottom {
+
+  display: flex;
+
+
+
+  justify-content: space-between;
+
+
+
+  margin-top: 100px;
+
+
+
+  padding-top: 20px;
+
+
+
+  border-top: 1px solid rgba(23, 20, 17, 0.2);
+
+
+
+  font-size: 8px;
+
+
+
+  letter-spacing: 0.2em;
+
+
+
+  opacity: 0.5;
+
+}
+
+
+
+/* =========================================================
+
+   MOBILE MENU
+
+========================================================= */
+
+
+
+.mobile-menu {
+
+  display: none;
+
+}
+
+
+
+/* =========================================================
+
+   RESPONSIVE
+
+========================================================= */
+
+
+
+@media (max-width: 900px) {
+
+
+
+  .navbar {
+
+    height: 75px;
+
+
+
+    padding: 0 24px;
+
+  }
+
+
+
+  .desktop-nav {
+
+    display: none;
+
+  }
+
+
+
+  .nav-actions .desktop-only {
+
+    display: none;
+
+  }
+
+
+
+  .mobile-menu-button {
+
+    display: flex;
+
+
+
+    align-items: center;
+
+
+
+    justify-content: center;
+
+  }
+
+
+
+  .nav-actions {
+
+    gap: 20px;
+
+  }
+
+
+
+  /* =====================================================
+
+     MOBILE MENU
+
+  ===================================================== */
+
+
+
+  .mobile-menu {
+
+    position: fixed;
+
+
+
+    z-index: 40;
+
+
+
+    top: 0;
+
+
+
+    right: 0;
+
+
+
+    width: 100%;
+
+
+
+    height: 100vh;
+
+
+
+    padding: 140px 35px 40px;
+
+
+
+    background: #171310;
+
+
+
+    display: flex;
+
+
+
+    flex-direction: column;
+
+
+
+    gap: 25px;
+
+
+
+    transform: translateX(100%);
+
+
+
+    transition:
+
+      transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+  }
+
+
+
+  .mobile-menu.open {
+
+    transform: translateX(0);
+
+  }
+
+
+
+  .mobile-menu button {
+
+    text-align: left;
+
+
+
+    font-family: "Playfair Display", serif;
+
+
+
+    font-size: 52px;
+
+
+
+    font-weight: 400;
+
+
+
+    color: #f5f2eb;
+
+  }
+
+
+
+  /* =====================================================
+
+     MOBILE HERO
+
+  ===================================================== */
+
+
+
+  .hero {
+
+    height: 100svh;
+
+
+
+    min-height: 700px;
+
+  }
+
+
+
+  .hero-model {
+
+    background-position: 61% center;
+
+  }
+
+
+
+  .hero-overlay {
+
+    background:
+
+      linear-gradient(
+
+        90deg,
+
+        rgba(10, 8, 7, 0.88),
+
+        rgba(10, 8, 7, 0.25)
+
+      ),
+
+      linear-gradient(
+
+        0deg,
+
+        rgba(10, 8, 7, 0.6),
+
+        transparent 50%
+
+      );
+
+  }
+
+
+
+  .hero-content {
+
+    left: 25px;
+
+
+
+    right: 25px;
+
+
+
+    top: 58%;
+
+  }
+
+
+
+  .hero-title {
+
+    font-size: clamp(55px, 15vw, 90px);
+
+  }
+
+
+
+  .side-index {
+
+    display: none;
+
+  }
+
+
+
+  .scroll-indicator {
+
+    left: 25px;
+
+  }
+
+
+
+  /* =====================================================
+
+     MOBILE INTRO
+
+  ===================================================== */
+
+
+
+  .intro-section {
+
+    padding: 100px 25px;
+
+
+
+    min-height: 60vh;
+
+  }
+
+
+
+  .intro-section h2 {
+
+    font-size: clamp(52px, 15vw, 90px);
+
+  }
+
+
+
+  /* =====================================================
+
+     MOBILE CATEGORY
+
+  ===================================================== */
+
+
+
+  .category-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .category-card {
+
+    height: 70vh;
+
+
+
+    min-height: 550px;
+
+
+
+    border-right: 0;
+
+
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  }
+
+
+
+  .category-content {
+
+    left: 25px;
+
+
+
+    right: 25px;
+
+  }
+
+
+
+  /* =====================================================
+
+     MOBILE STATEMENT
+
+  ===================================================== */
+
+
+
+  .statement {
+
+    min-height: 75vh;
+
+
+
+    padding: 100px 25px;
+
+  }
+
+
+
+  .statement h2 {
+
+    font-size: clamp(50px, 14vw, 90px);
+
+  }
+
+
+
+  /* =====================================================
+
+     MOBILE FOOTER
+
+  ===================================================== */
+
+
+
+  .footer {
+
+    padding: 80px 25px 30px;
+
+  }
+
+
+
+  .footer-brand {
+
+    font-size: 26vw;
+
+  }
+
+
+
+  .footer-columns {
+
+    grid-template-columns: 1fr 1fr;
+
+
+
+    gap: 60px 20px;
+
+  }
+
+
+
+  .footer-bottom {
+
+    margin-top: 70px;
+
+
+
+    flex-direction: column;
+
+
+
+    gap: 10px;
+
+  }
+
+}
+
+
+
+/* =========================================================
+
+   SMALL MOBILE
+
+========================================================= */
+
+
+
+@media (max-width: 520px) {
+
+
+
+  .brand {
+
+    font-size: 17px;
+
+  }
+
+
+
+  .nav-action {
+
+    font-size: 8px;
+
+  }
+
+
+
+  .nav-action svg {
+
+    display: none;
+
+  }
+
+
+
+  .hero-description {
+
+    font-size: 8px;
+
+  }
+
+
+
+  .hero-button {
+
+    font-size: 8px;
+
+  }
+
+
+
+  .category-content h3 {
+
+    font-size: 42px;
+
+  }
+
+}
+
+
+
+/* =========================================================
+
+   REDUCED MOTION
+
+========================================================= */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+  *,
+
+  *::before,
+
+  *::after {
+
+    scroll-behavior: auto !important;
+
+
+
+    animation-duration: 0.01ms !important;
+
+
+
+    animation-iteration-count: 1 !important;
+
+
+
+    transition-duration: 0.01ms !important;
+
+  }
+
+}
+
+
+
+/* =========================================================
+
+   FINAL NAV OVERRIDE
+
+   Guarantees visibility over the dark hero image.
+
+========================================================= */
+
+
+
+.nav-link {
+
+  color: #f5f2eb !important;
+
+
+
+  opacity: 1 !important;
+
+}
+
+
+
+.nav-link:hover {
+
+  color: #ffffff !important;
+
+
+
+  opacity: 1 !important;
+
+}
+
+/* =========================================================
+
+   VASTRA — COLLECTION PAGE FIX
+
+========================================================= */
+
+
+
+.collection-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #f4f1ea !important;
+
+  color: #171513 !important;
+
+  overflow-x: hidden;
+
+}
+
+
+
+/* =========================================================
+
+   COLLECTION HERO
+
+========================================================= */
+
+
+
+.collection-page .collection-hero {
+
+  position: relative !important;
+
+  width: 100% !important;
+
+  height: 78vh !important;
+
+  min-height: 650px !important;
+
+
+
+  display: flex !important;
+
+  align-items: flex-end !important;
+
+
+
+  background-size: cover !important;
+
+  background-position: center !important;
+
+  background-repeat: no-repeat !important;
+
+
+
+  overflow: hidden !important;
+
+}
+
+
+
+.collection-page .collection-hero-overlay {
+
+  position: absolute !important;
+
+  inset: 0 !important;
+
+
+
+  background:
+
+    linear-gradient(
+
+      to top,
+
+      rgba(0, 0, 0, 0.72) 0%,
+
+      rgba(0, 0, 0, 0.28) 45%,
+
+      rgba(0, 0, 0, 0.05) 100%
+
+    ) !important;
+
+
+
+  z-index: 1 !important;
+
+}
+
+
+
+.collection-page .collection-back {
+
+  position: absolute !important;
+
+
+
+  top: 110px !important;
+
+  left: 42px !important;
+
+
+
+  z-index: 10 !important;
+
+
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 10px !important;
+
+
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+
+
+  color: #ffffff !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 10px !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: 0.18em !important;
+
+
+
+  cursor: pointer !important;
+
+}
+
+
+
+.collection-page .collection-back:hover {
+
+  opacity: 0.65 !important;
+
+}
+
+
+
+.collection-page .collection-hero-content {
+
+  position: relative !important;
+
+
+
+  z-index: 5 !important;
+
+
+
+  width: 100% !important;
+
+
+
+  padding: 0 6vw 70px !important;
+
+
+
+  color: #ffffff !important;
+
+}
+
+
+
+.collection-page .collection-hero-content span {
+
+  display: block !important;
+
+
+
+  margin-bottom: 20px !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 10px !important;
+
+  letter-spacing: 0.25em !important;
+
+  text-transform: uppercase !important;
+
+}
+
+
+
+.collection-page .collection-hero-content h1 {
+
+  margin: 0 !important;
+
+
+
+  font-family:
+
+    Georgia,
+
+    "Times New Roman",
+
+    serif !important;
+
+
+
+  font-size: clamp(
+
+    80px,
+
+    13vw,
+
+    190px
+
+  ) !important;
+
+
+
+  font-weight: 400 !important;
+
+  line-height: 0.82 !important;
+
+
+
+  letter-spacing: -0.05em !important;
+
+
+
+  color: #ffffff !important;
+
+}
+
+
+
+.collection-page .collection-hero-content p {
+
+  margin: 28px 0 0 !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 11px !important;
+
+  letter-spacing: 0.22em !important;
+
+  text-transform: uppercase !important;
+
+
+
+  color: #ffffff !important;
+
+}
+
+
+
+/* =========================================================
+
+   COLLECTION CATEGORY NAVIGATION
+
+========================================================= */
+
+
+
+.collection-page .collection-navigation {
+
+  width: 100% !important;
+
+  min-height: 100px !important;
+
+
+
+  padding: 0 6vw !important;
+
+
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: space-between !important;
+
+
+
+  background: #f4f1ea !important;
+
+
+
+  border-bottom: 1px solid
+
+    rgba(23, 21, 19, 0.14) !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+.collection-page
+
+  .collection-navigation
+
+  > span {
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 9px !important;
+
+  letter-spacing: 0.2em !important;
+
+  color: #171513 !important;
+
+}
+
+
+
+.collection-page
+
+  .collection-navigation
+
+  > div {
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 35px !important;
+
+}
+
+
+
+.collection-page .collection-navigation button {
+
+  position: relative !important;
+
+
+
+  border: 0 !important;
+
+  outline: none !important;
+
+
+
+  padding: 12px 0 !important;
+
+
+
+  background: transparent !important;
+
+
+
+  color: #8b857d !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 9px !important;
+
+  letter-spacing: 0.18em !important;
+
+
+
+  cursor: pointer !important;
+
+}
+
+
+
+.collection-page
+
+  .collection-navigation
+
+  button.active {
+
+  color: #171513 !important;
+
+}
+
+
+
+.collection-page
+
+  .collection-navigation
+
+  button.active::after {
+
+  content: "" !important;
+
+
+
+  position: absolute !important;
+
+
+
+  left: 0 !important;
+
+  bottom: 2px !important;
+
+
+
+  width: 100% !important;
+
+  height: 1px !important;
+
+
+
+  background: #171513 !important;
+
+}
+
+
+
+/* =========================================================
+
+   PRODUCTS SECTION
+
+========================================================= */
+
+
+
+.collection-page .products-section {
+
+  width: 100% !important;
+
+
+
+  padding: 110px 6vw 150px !important;
+
+
+
+  background: #f4f1ea !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+.collection-page .products-header {
+
+  width: 100% !important;
+
+
+
+  display: flex !important;
+
+  align-items: flex-end !important;
+
+  justify-content: space-between !important;
+
+
+
+  margin-bottom: 65px !important;
+
+}
+
+
+
+.collection-page .products-header span {
+
+  display: block !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 9px !important;
+
+  letter-spacing: 0.2em !important;
+
+
+
+  color: #6e6861 !important;
+
+}
+
+
+
+.collection-page .products-header h2 {
+
+  margin: 18px 0 0 !important;
+
+
+
+  font-family:
+
+    Georgia,
+
+    "Times New Roman",
+
+    serif !important;
+
+
+
+  font-size: clamp(
+
+    42px,
+
+    5vw,
+
+    72px
+
+  ) !important;
+
+
+
+  font-weight: 400 !important;
+
+
+
+  line-height: 0.95 !important;
+
+
+
+  letter-spacing: -0.035em !important;
+
+
+
+  color: #171513 !important;
+
+}
+
+
+
+.collection-page .products-header > p {
+
+  margin: 0 !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 9px !important;
+
+  letter-spacing: 0.16em !important;
+
+
+
+  color: #6e6861 !important;
+
+}
+
+
+
+/* =========================================================
+
+   PRODUCT GRID
+
+========================================================= */
+
+
+
+.collection-page .products-grid {
+
+  width: 100% !important;
+
+
+
+  display: grid !important;
+
+
+
+  grid-template-columns:
+
+    repeat(3, minmax(0, 1fr)) !important;
+
+
+
+  column-gap: 24px !important;
+
+  row-gap: 70px !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+.collection-page .product-card {
+
+  width: 100% !important;
+
+
+
+  min-width: 0 !important;
+
+
+
+  cursor: pointer !important;
+
+}
+
+
+
+.collection-page .product-image {
+
+  position: relative !important;
+
+
+
+  width: 100% !important;
+
+
+
+  aspect-ratio: 0.78 !important;
+
+
+
+  overflow: hidden !important;
+
+
+
+  background: #e4dfd6 !important;
+
+}
+
+
+
+.collection-page .product-image img {
+
+  display: block !important;
+
+
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+
+
+  object-fit: cover !important;
+
+
+
+  transform: scale(1) !important;
+
+
+
+  transition:
+
+    transform 0.9s
+
+    cubic-bezier(
+
+      0.22,
+
+      1,
+
+      0.36,
+
+      1
+
+    ) !important;
+
+}
+
+
+
+.collection-page
+
+  .product-card:hover
+
+  .product-image
+
+  img {
+
+  transform: scale(1.045) !important;
+
+}
+
+
+
+/* QUICK VIEW */
+
+
+
+.collection-page .product-quick-view {
+
+  position: absolute !important;
+
+
+
+  left: 18px !important;
+
+  bottom: 18px !important;
+
+
+
+  z-index: 5 !important;
+
+
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 8px !important;
+
+
+
+  padding: 13px 17px !important;
+
+
+
+  border: 0 !important;
+
+
+
+  background: rgba(
+
+    255,
+
+    255,
+
+    255,
+
+    0.94
+
+  ) !important;
+
+
+
+  color: #171513 !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 8px !important;
+
+  letter-spacing: 0.16em !important;
+
+
+
+  cursor: pointer !important;
+
+
+
+  opacity: 0 !important;
+
+
+
+  transform: translateY(10px) !important;
+
+
+
+  transition:
+
+    opacity 0.35s ease,
+
+    transform 0.35s ease !important;
+
+}
+
+
+
+.collection-page
+
+  .product-card:hover
+
+  .product-quick-view {
+
+  opacity: 1 !important;
+
+
+
+  transform: translateY(0) !important;
+
+}
+
+
+
+/* =========================================================
+
+   PRODUCT INFORMATION
+
+========================================================= */
+
+
+
+.collection-page .product-details {
+
+  width: 100% !important;
+
+
+
+  display: flex !important;
+
+
+
+  align-items: flex-start !important;
+
+
+
+  justify-content: space-between !important;
+
+
+
+  gap: 20px !important;
+
+
+
+  padding-top: 18px !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+.collection-page .product-category {
+
+  display: block !important;
+
+
+
+  margin-bottom: 8px !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 8px !important;
+
+  letter-spacing: 0.18em !important;
+
+
+
+  color: #817a72 !important;
+
+
+
+  text-transform: uppercase !important;
+
+}
+
+
+
+.collection-page .product-details h3 {
+
+  margin: 0 !important;
+
+
+
+  font-family:
+
+    Georgia,
+
+    "Times New Roman",
+
+    serif !important;
+
+
+
+  font-size: 20px !important;
+
+
+
+  font-weight: 400 !important;
+
+
+
+  line-height: 1.1 !important;
+
+
+
+  color: #171513 !important;
+
+}
+
+
+
+.collection-page .product-price {
+
+  white-space: nowrap !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+
+
+  font-size: 10px !important;
+
+
+
+  letter-spacing: 0.08em !important;
+
+
+
+  color: #171513 !important;
+
+}
+
+
+
+/* =========================================================
+
+   COLLECTION END
+
+========================================================= */
+
+
+
+.collection-page .collection-end {
+
+  width: 100% !important;
+
+
+
+  padding: 150px 6vw !important;
+
+
+
+  background: #171513 !important;
+
+
+
+  color: #f5f2eb !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+.collection-page .collection-end > span {
+
+  font-family: Arial, sans-serif !important;
+
+
+
+  font-size: 9px !important;
+
+
+
+  letter-spacing: 0.25em !important;
+
+}
+
+
+
+.collection-page .collection-end h2 {
+
+  margin: 45px 0 !important;
+
+
+
+  font-family:
+
+    Georgia,
+
+    "Times New Roman",
+
+    serif !important;
+
+
+
+  font-size: clamp(
+
+    70px,
+
+    11vw,
+
+    170px
+
+  ) !important;
+
+
+
+  font-weight: 400 !important;
+
+
+
+  line-height: 0.82 !important;
+
+
+
+  letter-spacing: -0.05em !important;
+
+
+
+  color: #f5f2eb !important;
+
+}
+
+
+
+.collection-page .collection-end button {
+
+  display: inline-flex !important;
+
+
+
+  align-items: center !important;
+
+  gap: 10px !important;
+
+
+
+  padding: 15px 20px !important;
+
+
+
+  border: 1px solid
+
+    rgba(255, 255, 255, 0.4) !important;
+
+
+
+  background: transparent !important;
+
+
+
+  color: #ffffff !important;
+
+
+
+  font-family: Arial, sans-serif !important;
+
+
+
+  font-size: 9px !important;
+
+
+
+  letter-spacing: 0.18em !important;
+
+
+
+  cursor: pointer !important;
+
+
+
+  transition:
+
+background 0.3s ease,
+
+    color 0.3s ease !important;
+
+}
+
+
+
+.collection-page
+
+  .collection-end
+
+  button:hover {
+
+  background: #ffffff !important;
+
+  color: #171513 !important;
+
+}
+
+
+
+/* =========================================================
+
+   FOOTER BUTTONS
+
+========================================================= */
+
+
+
+.footer-columns button {
+
+  display: block !important;
+
+
+
+  margin: 0 0 10px !important;
+
+  padding: 0 !important;
+
+
+
+  border: 0 !important;
+
+
+
+  background: transparent !important;
+
+
+
+  color: inherit !important;
+
+
+
+  font: inherit !important;
+
+
+
+  text-align: left !important;
+
+
+
+  cursor: pointer !important;
+
+}
+
+
+
+/* =========================================================
+
+   MOBILE
+
+========================================================= */
+
+
+
+@media (max-width: 900px) {
+
+  .collection-page
+
+    .collection-hero {
+
+    height: 70vh !important;
+
+    min-height: 550px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-back {
+
+    top: 95px !important;
+
+    left: 22px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-hero-content {
+
+    padding: 0 22px 50px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-hero-content
+
+    h1 {
+
+    font-size: 80px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-navigation {
+
+    min-height: auto !important;
+
+
+
+    padding: 25px 22px !important;
+
+
+
+    flex-direction: column !important;
+
+
+
+    align-items: flex-start !important;
+
+
+
+    gap: 20px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-navigation
+
+    > div {
+
+    gap: 22px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .products-section {
+
+    padding: 75px 22px 100px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .products-header {
+
+    flex-direction: column !important;
+
+
+
+    align-items: flex-start !important;
+
+
+
+    gap: 20px !important;
+
+
+
+    margin-bottom: 40px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .products-grid {
+
+    grid-template-columns:
+
+      repeat(2, minmax(0, 1fr)) !important;
+
+
+
+    column-gap: 14px !important;
+
+
+
+    row-gap: 45px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .product-details {
+
+    display: block !important;
+
+  }
+
+
+
+  .collection-page
+
+    .product-price {
+
+    display: block !important;
+
+
+
+    margin-top: 8px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-end {
+
+    padding: 100px 22px !important;
+
+  }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+  .collection-page
+
+    .products-grid {
+
+    grid-template-columns: 1fr !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-hero-content
+
+    h1 {
+
+    font-size: 68px !important;
+
+  }
+
+
+
+  .collection-page
+
+    .collection-end
+
+    h2 {
+
+    font-size: 70px !important;
+
+  }
+
+}
+
+
+
+/* =========================================================
+
+   VASTRA LUXURY FOOTER
+
+========================================================= */
+
+
+
+.vastra-footer {
+
+  width: 100%;
+
+  background: #171717;
+
+  color: #f5f3ef;
+
+  padding: 70px 4vw 28px;
+
+  box-sizing: border-box;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SERVICE FEATURES
+
+========================================================= */
+
+
+
+.vastra-footer-features {
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 35px;
+
+  padding-bottom: 85px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+
+.vastra-footer-feature {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+
+
+.vastra-footer-feature svg {
+
+  color: #f5f3ef;
+
+}
+
+
+
+.vastra-footer-feature h4 {
+
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  text-transform: none;
+
+}
+
+
+
+.vastra-footer-feature p {
+
+  margin: 7px 0 0;
+
+  color: rgba(245, 243, 239, 0.58);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FOOTER CONTENT
+
+========================================================= */
+
+
+
+.vastra-footer-content {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1.2fr 1.35fr;
+
+  gap: 70px;
+
+  padding: 70px 0 65px;
+
+}
+
+
+
+
+
+.vastra-footer-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+}
+
+
+
+
+
+.vastra-footer-heading {
+
+  margin-bottom: 22px;
+
+  color: rgba(245, 243, 239, 0.68);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FOOTER BUTTONS
+
+========================================================= */
+
+
+
+.vastra-footer-column button {
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: rgba(245, 243, 239, 0.92);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+
+    color 0.25s ease,
+
+    transform 0.25s ease;
+
+}
+
+
+
+
+
+.vastra-footer-column button:hover {
+
+  color: #ffffff;
+
+  transform: translateX(4px);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CONTACT
+
+========================================================= */
+
+
+
+.vastra-contact-column {
+
+  gap: 20px;
+
+}
+
+
+
+
+
+.vastra-contact-item {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  color: rgba(245, 243, 239, 0.9);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  text-decoration: none;
+
+  transition:
+
+    color 0.25s ease,
+
+    transform 0.25s ease;
+
+}
+
+
+
+
+
+.vastra-contact-item:hover {
+
+  color: #ffffff;
+
+  transform: translateX(4px);
+
+}
+
+
+
+
+
+.vastra-contact-item svg {
+
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BRAND SECTION
+
+========================================================= */
+
+
+
+.vastra-footer-brand-section {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 50px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+
+
+
+.vastra-footer-logo {
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: clamp(48px, 8vw, 110px);
+
+  font-weight: 300;
+
+  letter-spacing: 0.18em;
+
+  line-height: 0.9;
+
+}
+
+
+
+
+
+.vastra-footer-brand-section p {
+
+  max-width: 390px;
+
+  margin: 0;
+
+  color: rgba(245, 243, 239, 0.55);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.13em;
+
+  text-align: right;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BOTTOM BAR
+
+========================================================= */
+
+
+
+.vastra-footer-bottom {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding-top: 25px;
+
+  color: rgba(245, 243, 239, 0.42);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TABLET
+
+========================================================= */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+  .vastra-footer-features {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 30px;
+
+  }
+
+
+
+  .vastra-footer-content {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px 40px;
+
+  }
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MOBILE
+
+========================================================= */
+
+
+
+@media (max-width: 650px) {
+
+
+
+  .vastra-footer {
+
+    padding: 55px 22px 25px;
+
+  }
+
+
+
+
+
+  .vastra-footer-features {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding-bottom: 55px;
+
+  }
+
+
+
+
+
+  .vastra-footer-feature {
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+  }
+
+
+
+
+
+  .vastra-footer-feature svg {
+
+    width: 32px;
+
+    height: 32px;
+
+  }
+
+
+
+
+
+  .vastra-footer-feature h4 {
+
+    font-size: 13px;
+
+  }
+
+
+
+
+
+  .vastra-footer-feature p {
+
+    font-size: 12px;
+
+  }
+
+
+
+
+
+  .vastra-footer-content {
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px 25px;
+
+    padding: 55px 0;
+
+  }
+
+
+
+
+
+  .vastra-footer-column {
+
+    gap: 13px;
+
+  }
+
+
+
+
+
+  .vastra-footer-heading {
+
+    margin-bottom: 15px;
+
+    font-size: 11px;
+
+  }
+
+
+
+
+
+  .vastra-footer-column button,
+
+  .vastra-contact-item {
+
+    font-size: 12px;
+
+  }
+
+
+
+
+
+  .vastra-footer-brand-section {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+  }
+
+
+
+
+
+  .vastra-footer-logo {
+
+    font-size: 48px;
+
+  }
+
+
+
+
+
+  .vastra-footer-brand-section p {
+
+    text-align: left;
+
+    font-size: 9px;
+
+  }
+
+
+
+
+
+  .vastra-footer-bottom {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    font-size: 9px;
+
+  }
+
+
+
+}
+
+
+
+/* =========================================================
+
+   COLLECTION END — NOTHING ORDINARY
+
+========================================================= */
+
+
+
+.collection-end {
+
+  position: relative;
+
+  min-height: 75vh;
+
+  padding: 110px 6vw 100px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  overflow: hidden;
+
+  background: #151311;
+
+  color: #f2eee7;
+
+}
+
+
+
+.collection-end > span {
+
+  display: block;
+
+  margin-bottom: 55px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+
+  color: #f2eee7;
+
+}
+
+
+
+.collection-end h2 {
+
+  margin: 0;
+
+  padding: 0;
+
+  max-width: 100%;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(72px, 10vw, 155px);
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.055em;
+
+  color: #f2eee7;
+
+}
+
+
+
+.collection-end h2 em {
+
+  font-style: normal;
+
+}
+
+
+
+.collection-end button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 55px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #5d5851;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  color: #f2eee7;
+
+  transition:
+
+    gap 0.3s ease,
+
+    border-color 0.3s ease;
+
+}
+
+
+
+.collection-end button:hover {
+
+  gap: 20px;
+
+  border-color: #f2eee7;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .collection-end {
+
+    min-height: 65vh;
+
+    padding: 80px 25px;
+
+  }
+
+
+
+  .collection-end > span {
+
+    margin-bottom: 38px;
+
+    font-size: 9px;
+
+  }
+
+
+
+  .collection-end h2 {
+
+    font-size: clamp(58px, 16vw, 90px);
+
+    line-height: 0.84;
+
+    letter-spacing: -0.05em;
+
+  }
+
+
+
+  .collection-end button {
+
+    margin-top: 42px;
+
+    font-size: 9px;
+
+  }
+
+}
+
+/* =========================================================
+   FINAL FIX — VASTRA BIGGER / NOTHING ORDINARY SMALLER
+========================================================= */
+
+.collection-page .collection-end > span {
+  display: block !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 120px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.15em !important;
+  line-height: 1 !important;
+  margin-bottom: 35px !important;
+  color: #f5f2eb !important;
+}
+
+.collection-page .collection-end h2 {
+  margin: 0 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 75px !important;
+  font-weight: 400 !important;
+  line-height: 0.9 !important;
+  letter-spacing: -0.04em !important;
+  color: #f5f2eb !important;
+}
+
+@media (max-width: 768px) {
+  .collection-page .collection-end > span {
+    font-size: 60px !important;
+  }
+
+  .collection-page .collection-end h2 {
+    font-size: 48px !important;
+  }
+}
+/* =========================================================
+   VASTRA HOMEPAGE — EDITORIAL CATEGORY LAYOUT
+========================================================= */
+
+.categories-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #100e0c;
+}
+
+/* -----------------------------------------
+   CATEGORY CARD
+----------------------------------------- */
+
+.category-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.category-card-large {
+  height: min(72vw, 720px);
+  min-height: 560px;
+}
+
+.category-card-small {
+  height: min(42vw, 520px);
+  min-height: 400px;
+}
+
+/* -----------------------------------------
+   IMAGE
+----------------------------------------- */
+
+.category-image {
+  position: absolute;
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  will-change: transform;
+
+  transition:
+    filter 600ms ease;
+}
+
+/* -----------------------------------------
+   DARK EDITORIAL OVERLAY
+----------------------------------------- */
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.02) 35%,
+      rgba(0, 0, 0, 0.58) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* -----------------------------------------
+   CONTENT
+----------------------------------------- */
+
+.category-content {
+  position: absolute;
+
+  left: clamp(28px, 6vw, 96px);
+  bottom: clamp(32px, 5vw, 72px);
+
+  z-index: 3;
+
+  color: #f4f0e8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Small VASTRA label */
+
+.category-eyebrow {
+  margin-bottom: 14px;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+
+  opacity: 0.78;
+}
+
+/* Category title */
+
+.category-content h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 400;
+
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+/* Subtitle */
+
+.category-subtitle {
+  margin-top: 18px;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  opacity: 0.82;
+}
+
+/* Explore */
+
+.category-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 26px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid rgba(244, 240, 232, 0.65);
+
+  font-size: 9px;
+  letter-spacing: 0.28em;
+
+  transition:
+    gap 250ms ease,
+    opacity 250ms ease;
+}
+
+.category-card:hover .category-explore {
+  gap: 18px;
+  opacity: 0.7;
+}
+
+/* -----------------------------------------
+   MIDDLE ROW
+----------------------------------------- */
+
+.category-middle-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1px;
+
+  background: rgba(244, 240, 232, 0.12);
+}
+
+/* Middle cards slightly more restrained */
+
+.category-card-small .category-content {
+  left: clamp(24px, 4vw, 60px);
+  bottom: clamp(28px, 4vw, 52px);
+}
+
+.category-card-small .category-content h3 {
+  font-size: clamp(36px, 4vw, 64px);
+}
+
+.category-card-small .category-eyebrow {
+  margin-bottom: 10px;
+}
+
+.category-card-small .category-subtitle {
+  margin-top: 12px;
+}
+
+.category-card-small .category-explore {
+  margin-top: 20px;
+}
+
+/* -----------------------------------------
+   IMAGE HOVER
+----------------------------------------- */
+
+.category-card:hover .category-image {
+  filter: saturate(1.04) contrast(1.04);
+}
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+
+@media (max-width: 800px) {
+
+  .category-card-large {
+    height: 70vw;
+    min-height: 430px;
+  }
+
+  .category-card-small {
+    height: 58vw;
+    min-height: 340px;
+  }
+
+  .category-content h3 {
+    font-size: clamp(40px, 9vw, 64px);
+  }
+
+  .category-middle-row {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card-small {
+    height: 65vw;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .category-card-large {
+    height: 105vw;
+    min-height: 420px;
+  }
+
+  .category-card-small {
+    height: 90vw;
+    min-height: 360px;
+  }
+
+  .category-content {
+    left: 24px;
+    bottom: 28px;
+  }
+
+  .category-content h3 {
+    font-size: 42px;
+  }
+
+  .category-eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.32em;
+  }
+
+  .category-subtitle {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+  }
+
+}
+
+/* =========================================================
+   VASTRA — FINAL FOOTER
+========================================================= */
+
+.footer {
+  width: 100%;
+  min-height: 260px;
+
+  padding: 42px 5vw 20px !important;
+
+  background: #0d0c0b !important;
+  color: #f5f3ef !important;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-columns {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+
+  margin-top: 0 !important;
+
+  padding-top: 0 !important;
+
+
+}
+
+
+/* =========================================================
+   EACH COLUMN
+========================================================= */
+
+.footer-columns > div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 9px;
+}
+
+
+/* COLUMN HEADINGS
+   EXPLORE / HOUSE / CONNECT
+========================================================= */
+
+.footer-columns > div > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.18em;
+
+  color: #f5f3ef;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FOOTER BUTTONS
+========================================================= */
+
+.footer-columns button {
+  width: fit-content;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: rgba(245, 243, 239, 0.62);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.04em;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-columns button:hover {
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-columns a {
+  width: fit-content;
+
+  margin: 0;
+  padding: 0;
+
+  color: rgba(245, 243, 239, 0.62) !important;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.04em;
+
+  text-decoration: none !important;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-columns a:hover {
+  color: #ffffff !important;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   BOTTOM ROW
+========================================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 30px !important;
+
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(245, 243, 239, 0.10);
+
+  box-sizing: border-box;
+
+  color: rgba(245, 243, 239, 0.40);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.20em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DESKTOP — KEEP FOOTER CLOSE TO BOTTOM
+========================================================= */
+
+@media (min-width: 901px) {
+  .footer {
+    min-height: 245px;
+
+    padding-top: 38px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    column-gap: 70px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .footer {
+    min-height: 300px;
+
+    padding: 40px 28px 20px !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .footer {
+    min-height: auto;
+
+    padding: 45px 24px 20px !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px 20px;
+  }
+
+  .footer-columns > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    margin-top: 35px !important;
+
+    flex-direction: row;
+
+    gap: 15px;
+  }
+}
+
+/* =========================================================
+   REMOVE COLLECTIONS TOP META
+========================================================= */
+
+.section-meta {
+  display: none !important;
+}
+
+.collections-meta {
+  display: none !important;
+}
+
+/* Remove top line from the Discover VASTRA section */
+.collections-section {
+  border-top: none !important;
+}
+
+.discover-section {
+  border-top: none !important;
+}
+
+/* =========================================================
+   VASTRA — FINAL FOOTER
+========================================================= */
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #0d0c0b;
+  color: #f1eee8;
+
+  padding: 42px 5vw 18px;
+}
+
+/* =========================================================
+   THREE COLUMNS
+========================================================= */
+
+.footer-columns {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 70px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Each column */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.footer-heading {
+  display: block;
+
+  margin: 0 0 18px;
+
+  color: #f1eee8;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.16em;
+}
+
+/* EXPLORE slightly larger */
+
+.footer-explore .footer-heading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+/* =========================================================
+   FOOTER BUTTONS / LINKS
+========================================================= */
+
+.footer-column button,
+.footer-column a {
+  width: 110px;
+
+  margin: 0 0 13px;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: rgba(241, 238, 232, 0.68);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.35;
+
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Last link in each column */
+
+.footer-column button:last-child,
+.footer-column a:last-child {
+  margin-bottom: 0;
+}
+
+/* Hover */
+
+.footer-column button:hover,
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 42px;
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(241, 238, 232, 0.14);
+
+  box-sizing: border-box;
+}
+
+/* Bottom text */
+
+.footer-bottom span {
+  color: rgba(241, 238, 232, 0.38);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.18em;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .footer {
+    padding: 38px 30px 16px;
+  }
+
+  .footer-columns {
+    column-gap: 35px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 32px 22px 15px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+    column-gap: 20px;
+  }
+
+  .footer-heading {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .footer-explore .footer-heading {
+    font-size: 12px;
+  }
+
+  .footer-column button,
+  .footer-column a {
+    width: 100px;
+
+    font-size: 11px;
+
+    margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+    margin-top: 34px;
+    padding-top: 13px;
+  }
+
+  .footer-bottom span {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   VASTRA — MORE SPACE AROUND CATEGORY CARDS
+========================================================= */
+
+.categories-section {
+  width: 100%;
+  margin: 0;
+  padding: 80px 0 120px;
+  background: #100e0c;
+  box-sizing: border-box;
+}
+
+/* Keep the 4 cards in one row */
+.category-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 0;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+/* Category card height */
+.category-card {
+  position: relative;
+  width: 100%;
+  height: 445px;
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .categories-section {
+    padding: 65px 0 90px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .categories-section {
+    padding: 55px 0 75px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+
+  .category-card {
+    height: 430px;
+  }
+}
+

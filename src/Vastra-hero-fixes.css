@@ -1,0 +1,58 @@
+/* VASTRA — HERO ONLY FIXES
+   This file intentionally overrides only the homepage hero sizing/viewport.
+*/
+
+.hero {
+  height: 100svh !important;
+  min-height: 100svh !important;
+}
+
+.hero-kicker,
+.section-kicker {
+  font-size: 12px !important;
+}
+
+.hero-title {
+  font-size: clamp(42px, 4vw, 64px) !important;
+  line-height: 0.94 !important;
+}
+
+.hero-description {
+  margin-top: 24px !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+
+.hero-button {
+  margin-top: 28px !important;
+  font-size: 12px !important;
+}
+
+.scroll-indicator {
+  bottom: 28px !important;
+  font-size: 10px !important;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+  }
+
+  .hero-title {
+    font-size: clamp(44px, 11vw, 64px) !important;
+  }
+
+  .hero-description {
+    font-size: 11px !important;
+  }
+
+  .hero-button {
+    font-size: 11px !important;
+  }
+
+  .scroll-indicator {
+    font-size: 9px !important;
+    bottom: 24px !important;
+  }
+}
