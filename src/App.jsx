@@ -5349,16 +5349,18 @@ function QuickViewModal({
           }}
         >
           <div
-            style={{
-              width: "min(1050px, 100%)",
-              maxHeight: "88vh",
-              overflow: "auto",
-              background: "#f7f4ef",
-              color: "#111",
-              padding: "28px",
-              boxShadow: "0 30px 80px rgba(0,0,0,0.28)",
-            }}
-          >
+  style={{
+    width: "min(1050px, calc(100vw - 24px))",
+    maxWidth: "calc(100vw - 24px)",
+    maxHeight: "88vh",
+    overflow: "auto",
+    background: "#f7f4ef",
+    color: "#111",
+    padding: "28px",
+    boxSizing: "border-box",
+    boxShadow: "0 30px 80px rgba(0,0,0,0.28)",
+  }}
+>
             <div
               style={{
                 display: "flex",
@@ -7195,35 +7197,22 @@ const [aboutOpen, setAboutOpen] = useState(false);
 
 
 
-  const openCategory = (category) => {
+ const openCategory = (category) => {
+  // Close any open overlay/drawer before opening a category
+  setWishlistOpen(false);
+  setCartOpen(false);
+  setSearchOpen(false);
+  setQuickViewProduct(null);
+  setProductPageProduct(null);
+  setMenuOpen(false);
 
+  window.location.hash = category;
 
-
-    window.location.hash = category;
-
-
-
-
-
-
-
-    window.scrollTo({
-
-
-
-      top: 0,
-
-
-
-      behavior: "instant",
-
-
-
-    });
-
-
-
-  };
+  window.scrollTo({
+    top: 0,
+    behavior: "instant",
+  });
+};
 
 
 
