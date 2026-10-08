@@ -76,6 +76,8 @@ import "./index.css";
 import "./Vastra-hero-fixes.css";
 import "./responsive.css";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 /* =========================================================
 
 
@@ -165,52 +167,52 @@ const products = (() => {
 
 
 const menImages = [
-  "/men-products/men-01.jpg",
-  "/men-products/men-02.jpg",
-  "/men-products/men-03.jpg",
-  "/men-products/men-04.jpg",
-  "/men-products/men-05.jpg",
-  "/men-products/men-06.jpg",
-  "/men-products/men-07.jpg",
-  "/men-products/men-08.jpg",
-  "/men-products/men-09.jpg",
-  "/men-products/men-10.jpg",
-  "/men-products/men-11.jpg",
-  "/men-products/men-12.jpg",
-  "/men-products/men-13.jpg",
-  "/men-products/men-14.jpg",
-  "/men-products/men-15.jpg",
-  "/men-products/men-16.jpg",
-  "/men-products/men-17.jpg",
-  "/men-products/men-18.jpg",
-  "/men-products/men-19.jpg",
-  "/men-products/men-20.jpg",
+  `${BASE_URL}men-products/men-01.jpg`,
+  `${BASE_URL}men-products/men-02.jpg`,
+  `${BASE_URL}men-products/men-03.jpg`,
+  `${BASE_URL}men-products/men-04.jpg`,
+  `${BASE_URL}men-products/men-05.jpg`,
+  `${BASE_URL}men-products/men-06.jpg`,
+  `${BASE_URL}men-products/men-07.jpg`,
+  `${BASE_URL}men-products/men-08.jpg`,
+  `${BASE_URL}men-products/men-09.jpg`,
+  `${BASE_URL}men-products/men-10.jpg`,
+  `${BASE_URL}men-products/men-11.jpg`,
+  `${BASE_URL}men-products/men-12.jpg`,
+  `${BASE_URL}men-products/men-13.jpg`,
+  `${BASE_URL}men-products/men-14.jpg`,
+  `${BASE_URL}men-products/men-15.jpg`,
+  `${BASE_URL}men-products/men-16.jpg`,
+  `${BASE_URL}men-products/men-17.jpg`,
+  `${BASE_URL}men-products/men-18.jpg`,
+  `${BASE_URL}men-products/men-19.jpg`,
+  `${BASE_URL}men-products/men-20.jpg`,
 ];
 
 
 
 
 const womenImages = [
-  "/women-products/1.jpg",
-  "/women-products/2.jpg",
-  "/women-products/3.jpg",
-  "/women-products/4.jpg",
-  "/women-products/5.jpg",
-  "/women-products/6.jpg",
-  "/women-products/7.jpg",
-  "/women-products/8.jpg",
-  "/women-products/9.jpg",
-  "/women-products/10.jpg",
-  "/women-products/11.jpg",
-  "/women-products/12.jpg",
-  "/women-products/13.jpg",
-  "/women-products/14.jpg",
-  "/women-products/15.jpg",
-  "/women-products/16.jpg",
-  "/women-products/17.jpg",
-  "/women-products/18.jpg",
-  "/women-products/19.jpg",
-  "/women-products/20.jpg",
+  `${BASE_URL}women-products/1.jpg`,
+  `${BASE_URL}women-products/2.jpg`,
+  `${BASE_URL}women-products/3.jpg`,
+  `${BASE_URL}women-products/4.jpg`,
+  `${BASE_URL}women-products/5.jpg`,
+  `${BASE_URL}women-products/6.jpg`,
+  `${BASE_URL}women-products/7.jpg`,
+  `${BASE_URL}women-products/8.jpg`,
+  `${BASE_URL}women-products/9.jpg`,
+  `${BASE_URL}women-products/10.jpg`,
+  `${BASE_URL}women-products/11.jpg`,
+  `${BASE_URL}women-products/12.jpg`,
+  `${BASE_URL}women-products/13.jpg`,
+  `${BASE_URL}women-products/14.jpg`,
+  `${BASE_URL}women-products/15.jpg`,
+  `${BASE_URL}women-products/16.jpg`,
+  `${BASE_URL}women-products/17.jpg`,
+  `${BASE_URL}women-products/18.jpg`,
+  `${BASE_URL}women-products/19.jpg`,
+  `${BASE_URL}women-products/20.jpg`,
 ];
 
 
@@ -219,31 +221,31 @@ const womenImages = [
 
 
 const perfumeImages = [
-  "/perfume-products/1.jpg",
-  "/perfume-products/2.jpg",
-  "/perfume-products/3.png",
-  "/perfume-products/4.jpg",
-  "/perfume-products/5.jpg",
-  "/perfume-products/6.jpg",
-  "/perfume-products/7.jpg",
-  "/perfume-products/8.jpg",
-  "/perfume-products/9.jpg",
-  "/perfume-products/10.jpg",
-  "/perfume-products/11.jpg",
-  "/perfume-products/12.jpg",
-  "/perfume-products/13.jpg",
-  "/perfume-products/14.jpg",
-  "/perfume-products/15.jpg",
-  "/perfume-products/16.jpg",
-  "/perfume-products/17.jpg",
-  "/perfume-products/18.jpg",
-  "/perfume-products/19.jpg",
-  "/perfume-products/20.jpg",
+  `${BASE_URL}perfume-products/1.jpg`,
+  `${BASE_URL}perfume-products/2.jpg`,
+  `${BASE_URL}perfume-products/3.png`,
+  `${BASE_URL}perfume-products/4.jpg`,
+  `${BASE_URL}perfume-products/5.jpg`,
+  `${BASE_URL}perfume-products/6.jpg`,
+  `${BASE_URL}perfume-products/7.jpg`,
+  `${BASE_URL}perfume-products/8.jpg`,
+  `${BASE_URL}perfume-products/9.jpg`,
+  `${BASE_URL}perfume-products/10.jpg`,
+  `${BASE_URL}perfume-products/11.jpg`,
+  `${BASE_URL}perfume-products/12.jpg`,
+  `${BASE_URL}perfume-products/13.jpg`,
+  `${BASE_URL}perfume-products/14.jpg`,
+  `${BASE_URL}perfume-products/15.jpg`,
+  `${BASE_URL}perfume-products/16.jpg`,
+  `${BASE_URL}perfume-products/17.jpg`,
+  `${BASE_URL}perfume-products/18.jpg`,
+  `${BASE_URL}perfume-products/19.jpg`,
+  `${BASE_URL}perfume-products/20.jpg`,
 ];
 
 const watchImages = Array.from(
   { length: 20 },
-  (_, i) => `/watch-products/${i + 1}.jpg`
+  (_, i) => `${BASE_URL}watch-products/${i + 1}.jpg`
 );
 
 
@@ -2229,7 +2231,7 @@ function Hero() {
             display: "block",
           }}
         >
-          <source src="/videos/vastra-editorial.mp4" type="video/mp4" />
+          <source src={`${BASE_URL}videos/vastra-editorial.mp4`} type="video/mp4" />
         </video>
 
 
@@ -2505,7 +2507,7 @@ function IntroSection() {
           zIndex: 0,
         }}
       >
-        <source src="/videos/intro-video.mp4" type="video/mp4" />
+        <source src={`${BASE_URL}videos/intro-video.mp4`} type="video/mp4" />
       </video>
 
       <div
@@ -3532,12 +3534,12 @@ function CollectionPage({
             <source
               src={
                 categoryKey === "men"
-                  ? "/videos/men-collection.mp4"
+                  ? `${BASE_URL}videos/men-collection.mp4`
                   : categoryKey === "women"
-                  ? "/videos/women-collection.mp4"
+                  ? `${BASE_URL}videos/women-collection.mp4`
                   : categoryKey === "watches"
-                  ? "/videos/watch-collection.mp4"
-                  : "/videos/perfume-collection.mp4"
+                  ? `${BASE_URL}videos/watch-collection.mp4`
+                  : `${BASE_URL}videos/perfume-collection.mp4`
               }
               type="video/mp4"
             />
@@ -6783,7 +6785,7 @@ function VastraSplashScreen() {
       >
         <img
           className="vastra-opening-logo"
-          src="/vastra-opening-logo-transparent.png"
+          src={`${BASE_URL}vastra-opening-logo-transparent.png`}
           alt="VASTRA by Rajveer"
           style={{
             width: "min(36vw, 390px)",
