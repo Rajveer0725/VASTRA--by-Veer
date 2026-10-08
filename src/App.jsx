@@ -1468,7 +1468,7 @@ function Navigation({
 
 
 
-        <div className="mobile-menu">
+       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
 
 
 
@@ -1508,82 +1508,34 @@ function Navigation({
 
 
 
-          <button
-
-
-
+                    <button
             onClick={() => {
-
-
-
               openCategory("women");
-
-
-
               setMenuOpen(false);
-
-
-
             }}
-
-
-
           >
-
-
-
             WOMEN
-
-
-
           </button>
-
-
-
-
-
-
 
           <button
-
-
-
             onClick={() => {
-
-
-
-              openCategory("perfumes");
-
-
-
+              openCategory("watches");
               setMenuOpen(false);
-
-
-
             }}
-
-
-
           >
-
-
-
-            PERFUMES
-
-
-
+            WATCHES
           </button>
 
-
-
+          <button
+            onClick={() => {
+              openCategory("perfumes");
+              setMenuOpen(false);
+            }}
+          >
+            PERFUMES
+          </button>
         </div>
-
-
-
       )}
-
-
-
     </header>
 
 

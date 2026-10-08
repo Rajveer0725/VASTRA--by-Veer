@@ -489,3 +489,95 @@ canvas {
     min-height: 190px !important;
   }
 }
+
+
+
+
+
+/* =========================================================
+   VASTRA MOBILE HOMEPAGE — CATEGORY OVERFLOW FIX
+========================================================= */
+
+@media (max-width: 600px) {
+  .categories-section {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .vastra-category-grid {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .vastra-category-card {
+    width: 100% !important;
+    height: 70vh !important;
+    min-height: 550px !important;
+    position: relative !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE HOMEPAGE — FIX OVERLAPPING
+========================================================= */
+
+@media (max-width: 600px) {
+  .categories-section {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .vastra-category-grid {
+    height: auto !important;
+    min-height: 0 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .vastra-category-card {
+    position: relative !important;
+    width: 100% !important;
+    height: 70vh !important;
+    min-height: 550px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE QUICK VIEW — FIX IMAGE ALIGNMENT
+========================================================= */
+
+@media (max-width: 600px) {
+  .product-quick-view-modal > div:first-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .product-quick-view-modal > div:first-child img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE MENU — MAKE OPEN MENU VISIBLE
+========================================================= */
+
+@media (max-width: 600px) {
+  .mobile-menu {
+    z-index: 2000 !important;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0) !important;
+  }
+}
