@@ -1414,48 +1414,6 @@ function Navigation({
 
 
 
-
-
-        <button
-
-
-
-          className="mobile-menu-button"
-
-
-
-          onClick={() => setMenuOpen(!menuOpen)}
-
-
-
-        >
-
-
-
-          {menuOpen ? (
-
-
-
-            <X size={20} />
-
-
-
-          ) : (
-
-
-
-            <Menu size={20} />
-
-
-
-          )}
-
-
-
-        </button>
-
-
-
       </div>
 
 
@@ -5016,12 +4974,13 @@ function QuickViewModal({
             src={productImages[activeImage]}
             alt={`${product.name} view ${activeImage + 1}`}
             style={{
-              width: "100%",
-              height: "100%",
-              minHeight: "560px",
-              objectFit: "cover",
-              display: "block",
-            }}
+  width: "100%",
+  height: "100%",
+  minHeight: 0,
+  objectFit: "cover",
+  objectPosition: "center center",
+  display: "block",
+}}
           />
 
           <button
