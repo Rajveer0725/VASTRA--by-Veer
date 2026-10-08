@@ -581,3 +581,127 @@ canvas {
     transform: translateX(0) !important;
   }
 }
+
+
+
+/* =========================================================
+   VASTRA MOBILE HOMEPAGE — FOUR CATEGORY CARDS
+========================================================= */
+
+@media (max-width: 600px) {
+
+  #collections {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 16px 40px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  #collections .vastra-category-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+    gap: 12px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  #collections .vastra-category-card {
+    width: 100% !important;
+    height: 70vh !important;
+    min-height: 550px !important;
+    max-height: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
+
+/* =========================================================
+   VASTRA MOBILE QUICK VIEW — IMAGE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .product-quick-view-modal {
+    width: calc(100vw - 20px) !important;
+    height: calc(100svh - 30px) !important;
+    max-height: calc(100svh - 30px) !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 42svh minmax(0, 1fr) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .product-quick-view-modal > div:first-child {
+    width: 100% !important;
+    height: 42svh !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .product-quick-view-modal > div:first-child img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+
+  .product-quick-view-modal > div:nth-child(2) {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
+
+/* =========================================================
+   VASTRA MOBILE QUICK VIEW — SHORT SCREENS
+========================================================= */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+  .product-quick-view-modal {
+    grid-template-rows: 36svh minmax(0, 1fr) !important;
+  }
+
+  .product-quick-view-modal > div:first-child {
+    height: 36svh !important;
+  }
+
+}
+
+
+/* =========================================================
+   VASTRA MOBILE MENU
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .mobile-menu {
+    z-index: 2000 !important;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0) !important;
+  }
+
+}
